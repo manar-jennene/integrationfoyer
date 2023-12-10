@@ -1,0 +1,43 @@
+
+
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <h1 class="text-center mb-4">Update Room</h1>
+  <form [formGroup]="reactiveForm">
+    <div class="col-sm-12 col-xl-10">
+      <div class="bg-light rounded h-100 p-4">
+        <div class="card-body">
+          <h6 class="card-title">Numero Chambre</h6>
+          <div class="mt-4">
+            <div class="form-group">
+              <input type="text"formControlName="numeroChambre" class="form-control" name="numeroChambre"  id="numeroChambre">
+            </div>
+            <div [ngStyle]="{'color':'red'}" class="alter alter-danger" id="updateFieldNumeroChambre" *ngIf="numeroChambre?.errors?.['required'] && numeroChambre?.touched" > idDepart is required</div>
+          </div >
+          <br>
+          <h6 class="card-title">Type Chambre</h6>
+          <div class="mt-4">
+          <div class="form-group">
+            <select type="text"formControlName="typec" class="form-control" name="typec"  id="typec">
+              <option value="SIMPLE">Simple</option>
+              <option value="DOUBLE">Double</option>
+              <option value="TRIPLE">Triple</option>
+            </select>
+            <br>
+  
+          </div>
+          <div [ngStyle]="{'color':'red'}" class="alter alter-danger" id="updateFieldTypec" *ngIf="typec?.errors?.['required'] && typec?.touched" > idDepart is required</div>
+  
+        </div >
+  
+        </div>
+        <div class="row justify-content-center">
+        <button type="submit" class="btn btn-primary" (click)="updateChambre()">update </button>
+        </div>
+      </div>
+    </div>
+  </form>
+      </div>
+    </div>
+  </div>

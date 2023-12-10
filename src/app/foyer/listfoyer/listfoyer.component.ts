@@ -44,7 +44,7 @@ deleteFoyer(id: number) {
         console.log("Réponse de la suppression :", res);
 
         // Rediriger vers la liste des foyers après la suppression réussie
-        this.router.navigate(['/listfoyer']);
+        this.router.navigate(['/foyer/listfoyer']);
       },
       err => console.log("Erreur lors de la suppression :", err)
     );

@@ -14,6 +14,7 @@ import { ReservationModule } from './reservation/reservation.module';
 import { CommonModule } from '@angular/common';
 import { MessageService } from 'primeng/api';
 import { FoyerfrontComponent } from './front/foyerfront/foyerfront.component';
+import { ChambreModule } from './chambre/chambre.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { FoyerfrontComponent } from './front/foyerfront/foyerfront.component';
     ToastModule,
     BrowserAnimationsModule,
     ReservationModule,
-    CommonModule
+    CommonModule,
+    ChambreModule
     
 
 

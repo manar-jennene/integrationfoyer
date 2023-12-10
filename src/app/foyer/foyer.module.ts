@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { BackofficeComponent } from '../back/backoffice/backoffice.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
+import { UpdatefoyerComponent } from './updatefoyer/updatefoyer.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
     AddfoyerComponent,
     BackofficeComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    UpdatefoyerComponent
   ],
   imports: [
     CommonModule,

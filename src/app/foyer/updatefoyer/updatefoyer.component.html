@@ -1,0 +1,20 @@
+<div class="container">
+
+    <h2 class="text-center mb-4">modifier un foyer</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form #updateForm="ngForm" (ngSubmit)="updateFoyer()">
+            <div class="mb-3">
+  
+        </div>
+        <label for="nomfoyer">Nom foyer </label>
+        <input type="text" class="form-control" id="nomFoyer" name="nomFoyer" [(ngModel)]="foyerData.nomFoyer" #nomFoyer="ngModel">
+        <small class="text text-danger" *ngIf="nomFoyer?.errors?.['required'] && nomFoyer.touched">Date required</small>
+        <label class="form-check-label" for="capaciteFoyer">capaciteFoyer</label>
+  
+  
+        <input type="data"class="form-control" id="capaciteFoyer" name="capaciteFoyer" [(ngModel)]="foyerData.capaciteFoyer" #capaciteFoyer="ngModel">
+        <button type="submit" class="btn btn-primary">Modifier foyer</button>
+
+        </form>
+  </div>

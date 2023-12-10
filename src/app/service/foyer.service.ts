@@ -50,6 +50,11 @@ export class FoyerService {
     );
   }
 
+  ajouterFoyerEtAffecterAUniversite(foyer: Foyer, idUniversite: number): Observable<Foyer> {
+    const url = `${this.URl}/ajouterFoyerEtAffecterAUniversite/${idUniversite}`;
+    return this.http.post<Foyer>(url, foyer);
+  }
+
   
  
   

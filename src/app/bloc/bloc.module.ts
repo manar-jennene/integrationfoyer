@@ -7,6 +7,7 @@ import { AddBlocComponent } from './add-bloc/add-bloc.component';
 import { EditBlocComponent } from './edit-bloc/edit-bloc.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlocService } from '../service/bloc.service';
+
 //import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
@@ -20,7 +21,7 @@ import { BlocService } from '../service/bloc.service';
     BlocRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-   // Ng2SearchPipeModule
+   //Ng2SearchPipeModule
     
   ],
   providers: [BlocService]

@@ -19,7 +19,7 @@
                 <td>{{b.nomBloc}}</td>
                 <td>{{b.capacityBloc}}</td>
                 <td>
-                    <button type="submit" class="btn btn-primary" [routerLink]="['/edit-bloc',b.idBloc]"><i class="fas fa-edit"></i></button>
+                    <button type="submit" class="btn btn-primary" [routerLink]="['/editbloc',b.idBloc]"><i class="fas fa-edit"></i></button>
                     <button type="button" class="btn btn-danger" (click)="deleteBloc(b.idBloc)" ><i class="fas fa-trash-alt"></i></button>
                 </td>
             </tr>

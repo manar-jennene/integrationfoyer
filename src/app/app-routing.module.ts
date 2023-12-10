@@ -7,17 +7,14 @@ import { FoyerfrontComponent } from './front/foyerfront/foyerfront.component';
 const routes: Routes = [
   {path:"front" , component:FrontofficeComponent},
   {path:"foyerfont" , component:FoyerfrontComponent},
-
   //{path:"back" , component:BackofficeComponent},
   { path: 'foyer', loadChildren: () => import('./foyer/foyer.module').then(m => m.FoyerModule) },
   { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
-  {
-    path: "reservation", loadChildren: () =>import('./reservation/reservation.module').then((m) => m.ReservationModule),
+  {path: "reservation", loadChildren: () =>import('./reservation/reservation.module').then((m) => m.ReservationModule),},
+  { path: "", loadChildren: () => import('./universite/universite.module').then((m) => m.UniversiteModule) },
+  {path: 'bloc', loadChildren: () => import('./bloc/bloc.module').then((m) => m.BlocModule) },
+  { path: '', loadChildren: () => import('./chambre/chambre.module').then((m) => m.ChambreModule) },
 
-  },
-  {path: "", loadChildren: () =>import('./universite/universite.module').then((m) => m.UniversiteModule)} ,
-
- {path: "", loadChildren: () =>import('./bloc/bloc.module').then((m) => m.BlocModule)} ,
 
 
 
