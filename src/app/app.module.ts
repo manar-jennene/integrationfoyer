@@ -13,10 +13,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReservationModule } from './reservation/reservation.module';
 import { CommonModule } from '@angular/common';
 import { MessageService } from 'primeng/api';
+import { FoyerfrontComponent } from './front/foyerfront/foyerfront.component';
 @NgModule({
   declarations: [
     AppComponent,
     FrontofficeComponent,
+    FoyerfrontComponent,
    
   ],
   imports: [
