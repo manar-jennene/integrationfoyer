@@ -1,0 +1,27 @@
+<!-- authentification.component.html -->
+<div class="foyer-authentication-container">
+    <form [formGroup]="authForm" (ngSubmit)="onSubmit()" class="foyer-authentication-form">
+      <h2>Se connecter </h2>
+  
+      <label for="email">Email:</label>
+      <input type="text" id="email" formControlName="email" autocomplete="username" placeholder="Enter your email">
+  
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password" autocomplete="current-password" placeholder="Enter your password">
+  
+      <label for="role">Select Role:</label>
+      <select id="role" formControlName="role">
+        <option value="admin">Admin</option>
+        <option value="client">Client</option>
+      </select>
+  
+      <button type="submit" [disabled]="authForm.invalid">Login</button>
+  
+      <!-- Loading indicator -->
+      <div *ngIf="loading" class="loading-indicator">Logging in...</div>
+  
+      <!-- Error message -->
+      <div *ngIf="error" class="error-message">{{ error }}</div>
+    </form>
+  </div>
+  

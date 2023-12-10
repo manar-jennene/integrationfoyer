@@ -1,0 +1,15 @@
+#content {
+    display: flex;
+}
+
+#sidebar {
+    /* Styles pour la barre de navigation */
+    width: 250px;
+    height: 100vh;
+    background-color: #f8f9fa; /* Changez la couleur selon votre design */
+}
+
+.container {
+    width: 100%; /* Prend la largeur restante */
+    padding: 20px; /* Ajoutez un espace entre le contenu et la barre de navigation */
+}

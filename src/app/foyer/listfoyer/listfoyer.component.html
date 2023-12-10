@@ -1,0 +1,48 @@
+<!-- app-root.component.html -->
+
+<app-navbar></app-navbar>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+            <div class="position-sticky">
+                <!-- Contenu de la sidebar ici -->
+                <!-- Vous pouvez ajouter des liens, des menus, etc. -->
+            </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-5" style="position: fixed; top: 0;">
+            <div class="text-end">
+                <button type="submit" class="btn btn-primary" (click)="navigateToAddFoyer()">Ajouter un foyer</button>
+            </div>
+
+            <div class="table-responsive mt-4" style="margin-left: auto;">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nom Foyer</th>
+                            <th>Capacite Foyer</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let f of List_foyer" class="table-row">
+                            <td class="table-cell">{{ f.nomFoyer }}</td>
+                            <td class="table-cell">{{ f.capaciteFoyer }}</td>
+                            <td class="table-cell">
+                                <a [routerLink]="['editUser', f.idFoyer]" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                               
+                                <button (click)="deleteFoyer(f.idFoyer)" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Supprimer">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</div>
