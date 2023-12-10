@@ -1,21 +1,56 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Reservation } from 'src/app/models/reservation';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { ReservationService } from 'src/app/service/reservation.service';
 
-import { ListReservationsEtudiantComponent } from './list-reservations-etudiant.component';
+@Component({
+  selector: 'app-list-reservations-etudiant',
+  templateUrl: './list-reservations-etudiant.component.html',
+  styleUrls: ['./list-reservations-etudiant.component.scss'],
+})
+export class ListReservationsEtudiantComponent implements OnInit {
+  id: Number = NaN;
+  isLoading: boolean = true;
 
-describe('ListReservationsEtudiantComponent', () => {
-  let component: ListReservationsEtudiantComponent;
-  let fixture: ComponentFixture<ListReservationsEtudiantComponent>;
+  reservations: Reservation[] = [];
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private reservationService: ReservationService,
+    public messageService: MessageService
+  ) {}
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [ListReservationsEtudiantComponent]
-    });
-    fixture = TestBed.createComponent(ListReservationsEtudiantComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  ngOnInit(): void {
+    // set id from params snapshot
+    this.id = Number(this.route.snapshot.params?.['id']);
+    console.log('🚀 ~ this.id:', this.id);
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    // get reservations by id
+    this.reservationService
+      .getReservationsByEtudiant(Number(this.route.snapshot.params?.['id']))
+      .subscribe({
+        next: (response: any) => {
+          this.isLoading = false;
+          this.messageService.add({
+            severity: 'success',
+            summary: 'Succès',
+            detail: `${response.data.reservations.length} réservations récupérées avec succès.`,
+          });
+          console.log('response:', response);
+          this.reservations = response.data.reservations;
+          console.log('🚀 ~ reservations:', this.reservations);
+        },
+        error: (error) => {
+          this.messageService.add({
+            severity: 'error',
+            summary: 'Erreur',
+            detail:
+              error?.error?.message ||
+              'Une erreur est survenue lors de la validation de la réservation.',
+          });
+          console.error('Error fetching data:', error);
+        },
+      });
+  }
+}

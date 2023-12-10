@@ -7,7 +7,10 @@ const routes: Routes = [
   {path:"front" , component:FrontofficeComponent},
   //{path:"back" , component:BackofficeComponent},
   { path: 'foyer', loadChildren: () => import('./foyer/foyer.module').then(m => m.FoyerModule) },
-  { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) }
+  { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
+  {
+    path: "reservation", loadChildren: () =>import('./reservation/reservation.module').then((m) => m.ReservationModule),
+  }
 
 
 

@@ -1,1 +1,56 @@
-<p>reservation-form works!</p>
+<div class="application">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form">
+      <div class="grid">
+        <div class="col-12">
+          <label class="label required">Etudiant</label>
+          <p-dropdown
+            id="etudiants"
+            [(ngModel)]="selectedEtudiant"
+            name="selectedEtudiant"
+            [options]="etudiants"
+            optionLabel="nom"
+            placeholder="Select an etudiant"
+            [required]="true"
+            #etudiantDropdown="ngModel"
+          ></p-dropdown>
+          <div
+            *ngIf="etudiantDropdown.touched && !selectedEtudiant"
+            class="error-message"
+          >
+            Etudiant is required.
+          </div>
+        </div>
+  
+        <div class="col-12">
+          <label class="label required">Chambre</label>
+          <p-dropdown
+            id="chambres"
+            [(ngModel)]="selectedChambre"
+            name="selectedChambre"
+            [options]="chambres"
+            optionLabel="numero"
+            placeholder="Select a chambre"
+            [required]="true"
+            #chambreDropdown="ngModel"
+          ></p-dropdown>
+  
+          <div
+            *ngIf="chambreDropdown.touched && !selectedChambre"
+            class="error-message"
+          >
+            Chambre is required.
+          </div>
+        </div>
+      </div>
+      <div class="footer-popup">
+        <button
+          type="submit"
+          class="primary-button"
+          [disabled]="!selectedChambre || !selectedEtudiant"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+  
