@@ -30,7 +30,7 @@ export class AddfoyerComponent {
        console.log(this.newFoyer.nomFoyer);
        //this.List_user.push(newUser);
         this.foyers.addFoyer(this.newFoyer).subscribe(()=>{alert('added succefully');
-        this.Router.navigateByUrl('/listfoyer');
+        this.Router.navigateByUrl('/foyer/listfoyer');
       });
 
        F.resetForm();

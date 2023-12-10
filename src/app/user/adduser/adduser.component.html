@@ -1,12 +1,17 @@
+<app-backoffice></app-backoffice>
+
 <div class="container">
-    <div class="row">
-      <div class="col-lg-6 offset-lg-3">
-        <div class="main-box clearfix mt-5 mb-4">
-          <h2 class="text-center">Ajouter un utilisateur</h2>
-  
-          <form #addForm="ngForm" (ngSubmit)="adduser(addForm)">
-            <div class="form-group">
+  <div class="row justify-content-center mt-5">
+      <div class="col-lg-6">
+          <div class="card">
+              <div class="card-header">
+                  <h2 class="text-center">Ajouter un utilisateur</h2>
+              </div>
+              <div class="card-body">
+                  <form #addForm="ngForm" (ngSubmit)="adduser(addForm)">
+          <div class="form-group">
               <label for="nom">Nom:</label>
+              
               <input type="text" class="form-control" id="nom" name="nom" ngModel required minlength="3" #nom="ngModel">
               <small class="text text-danger" *ngIf="nom?.errors?.['required'] && nom.touched">Le nom est requis</small>
               <small class="text text-danger" *ngIf="nom?.errors?.['minlength'] && nom.touched">Le nom doit comporter au moins 3 caractères</small>
@@ -47,16 +52,19 @@
               <small class="text text-danger" *ngIf="adresse?.errors?.['pattern'] && adresse.touched">L'adresse doit contenir uniquement des lettres</small>
             </div>
   
-            <div class="form-group">
+            <div class="form-group" style="margin-bottom: 20px;">
               <label for="nbphone">Téléphone:</label>
               <input type="text" class="form-control" id="nbphone" name="nbphone" ngModel required minlength="5" #nbphone="ngModel">
               <small class="text text-danger" *ngIf="nbphone?.errors?.['required'] && nbphone.touched">Le numéro de téléphone est requis</small>
             </div>
   
-            <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">Soumettre</button>
+            <div class="text-center"> <!-- Ajout de la classe pour centrer -->
+              <button type="submit" pButton label="Soumettre" class="p-button p-button-raised p-button-rounded p-button-text btn-green" [disabled]="addForm.invalid"></button>
+            </div>
           </form>
         </div>
       </div>
     </div>
+  </div>
   </div>
   

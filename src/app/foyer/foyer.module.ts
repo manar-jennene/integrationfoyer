@@ -5,7 +5,6 @@ import { FoyerRoutingModule } from './foyer-routing.module';
 import { ListfoyerComponent } from './listfoyer/listfoyer.component';
 import { AddfoyerComponent } from './addfoyer/addfoyer.component';
 import { FormsModule } from '@angular/forms';
-import { BackofficeComponent } from '../back/backoffice/backoffice.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { UpdatefoyerComponent } from './updatefoyer/updatefoyer.component';
@@ -15,7 +14,7 @@ import { UpdatefoyerComponent } from './updatefoyer/updatefoyer.component';
   declarations: [
     ListfoyerComponent,
     AddfoyerComponent,
-    BackofficeComponent,
+    
     NavbarComponent,
     SidebarComponent,
     UpdatefoyerComponent

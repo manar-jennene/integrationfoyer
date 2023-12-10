@@ -1,35 +1,37 @@
+   
+<app-navbar></app-navbar>
 <div class="container">
-    <div class="row">
-        <div class="col-lg-6 offset-lg-3"> <!-- Adjust the column width and offset based on your design -->
-            <div class="main-box clearfix mt-5 mb-4">
-                <h2 class="text-center">Ajouter un foyer</h2>
-
-                <form #addForm="ngForm"   (ngSubmit)="addFoyer(addForm)">
-                    <div class="form-group">
-                        <label for="nomFoyer">Nom Foyer:</label>
-                        <input type="text" class="form-control" id="nomFoyer" name="nomFoyer" ngModel required minlength="3" #nomFoyer="ngModel">
-                        <small class="text text-danger" *ngIf="nomFoyer?.errors?.['required'] && nomFoyer.touched">Name is required</small>
-                        <small class="text text-danger" *ngIf="nomFoyer?.errors?.['pattern'] && nomFoyer.touched">Nom de foyer should only contain letters</small>
-
-                        <label for="capaciteFoyer">Capacite de Foyer:</label>
-                        <input type="number" class="form-control" id="capaciteFoyer" name="capaciteFoyer" ngModel required
-                            [max]="200" minlength="1" #capaciteFoyer="ngModel">
-                        <small class="text text-danger" *ngIf="capaciteFoyer?.errors?.['required'] && capaciteFoyer.touched">Capacite is required</small>
-                        <small class="text text-danger" *ngIf="capaciteFoyer?.errors?.['minlength'] && capaciteFoyer.touched">Capacite should have at least 1 digit</small>
-                        <small class="text text-danger" *ngIf="capaciteFoyer?.errors?.['max'] && capaciteFoyer.touched">Capacite should not exceed 200</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="idUniversite">ID Universite:</label>
-                        <input type="number" class="form-control" id="idUniversite" name="idUniversite" ngModel required
-                            [min]="1" minlength="1" #idUniversite="ngModel">
-                        <small class="text text-danger" *ngIf="idUniversite?.errors?.['required'] && idUniversite.touched">ID Universite is required</small>
-                        <small class="text text-danger" *ngIf="idUniversite?.errors?.['minlength'] && idUniversite.touched">ID Universite should have at least 1 digit</small>
-                        <small class="text text-danger" *ngIf="idUniversite?.errors?.['min'] && idUniversite.touched">ID Universite should be greater than or equal to 1</small>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+     <div class="row justify-content-center mt-5">
+         <div class="col-lg-6">
+             <div class="card">
+                 <div class="card-header">
+                     <h2 class="text-center">Ajouter un foyer</h2>
+                 </div>
+                 <div class="card-body">
+                     <form #addForm="ngForm" (ngSubmit)="addFoyer(addForm)">
+                         <div class="form-group">
+                             <label for="nomFoyer">Nom Foyer:</label>
+                             <input type="text" class="form-control" id="nomFoyer" name="nomFoyer" ngModel required minlength="3" #nomFoyer="ngModel">
+                             <small class="text-danger" *ngIf="nomFoyer?.errors?.['required'] && nomFoyer.touched">Le nom est requis</small>
+                             <small class="text-danger" *ngIf="nomFoyer?.errors?.['minlength'] && nomFoyer.touched">Le nom doit contenir au moins 3 caractères</small>
+                         </div>
+                         <div class="form-group">
+                             <label for="capaciteFoyer">Capacité de Foyer:</label>
+                             <input type="number" class="form-control" id="capaciteFoyer" name="capaciteFoyer" ngModel required [max]="200" minlength="1" #capaciteFoyer="ngModel">
+                             <small class="text-danger" *ngIf="capaciteFoyer?.errors?.['required'] && capaciteFoyer.touched">La capacité est requise</small>
+                             <small class="text-danger" *ngIf="capaciteFoyer?.errors?.['minlength'] && capaciteFoyer.touched">La capacité doit être d'au moins 1 chiffre</small>
+                             <small class="text-danger" *ngIf="capaciteFoyer?.errors?.['max'] && capaciteFoyer.touched">La capacité ne doit pas dépasser 200</small>
+                         </div>
+                         <div class="d-flex justify-content-center align-items-end" style="height: 10vh;">
+                             <div class="text-center">
+                                 <!-- Insérez ici votre bouton -->
+                                 <button type="submit" class="btn btn-primary custom-button" [disabled]="addForm.invalid">Soumettre</button>
+                             </div>
+                         </div>
+                         
+                     </form>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>

@@ -1,0 +1,35 @@
+/* Dans votre fichier CSS ou fichier de styles globaux */
+.btn-green {
+    background-color: green; /* Définir la couleur de fond */
+    color: white; /* Définir la couleur du texte */
+  }
+  /* Style pour le bouton */
+.p-button {
+    background-color: #33cc99;
+    color: white;
+    width: 100%; /* Pour occuper toute la largeur du conteneur */
+    margin-top: 20px; /* Espacement par rapport aux autres éléments */
+}
+
+/* Style pour la carte (card) */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour le titre du formulaire */
+.card-header h2 {
+    margin-bottom: 20px;
+}
+
+/* Style pour les champs de formulaire */
+.form-control {
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Style pour les messages d'erreur */
+.text-danger {
+    font-size: 14px;
+}
