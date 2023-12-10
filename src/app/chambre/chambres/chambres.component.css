@@ -1,0 +1,4 @@
+.container-fluid {
+    max-width: 90%; /* Réduit la largeur de la liste à 80% de la largeur de son conteneur */
+    margin: 10px auto; /* Centre la liste horizontalement */
+}

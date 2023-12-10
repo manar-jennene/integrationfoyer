@@ -7,13 +7,15 @@ import { ChambresComponent } from './chambres/chambres.component';
 import { UpdateChambreComponent } from './update-chambre/update-chambre.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NavchamComponent } from '../navcham/navcham.component';
 //import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
     AddChambreComponent,
     ChambresComponent,
-    UpdateChambreComponent
+    UpdateChambreComponent,
+    NavchamComponent
   ],
   imports: [
     CommonModule,

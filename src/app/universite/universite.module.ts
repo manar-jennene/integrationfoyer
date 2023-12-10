@@ -8,19 +8,23 @@ import { EditUniversiteComponent } from './edit-universite/edit-universite.compo
 //import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UniversiteService } from '../service/universite.service';
+import { NavbarUnComponent } from '../navbar-un/navbar-un.component';
 
 
 @NgModule({
   declarations: [
     UniversiteListComponent,
     AddUniversiteComponent,
-    EditUniversiteComponent
+    EditUniversiteComponent,
+    NavbarUnComponent
   ],
   imports: [
     CommonModule,
     UniversiteRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    
+    
     //Ng2SearchPipeModule
   ],
   providers:[UniversiteService]

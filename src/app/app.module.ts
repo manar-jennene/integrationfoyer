@@ -15,11 +15,17 @@ import { CommonModule } from '@angular/common';
 import { MessageService } from 'primeng/api';
 import { FoyerfrontComponent } from './front/foyerfront/foyerfront.component';
 import { ChambreModule } from './chambre/chambre.module';
+import { BlocfrontComponent } from './front/blocfront/blocfront.component';
+import { ChambrefrontComponent } from './front/chambrefront/chambrefront.component';
+import { UnifrontComponent } from './front/unifront/unifront.component';
 @NgModule({
   declarations: [
     AppComponent,
     FrontofficeComponent,
     FoyerfrontComponent,
+    BlocfrontComponent,
+    ChambrefrontComponent,
+    UnifrontComponent,
    
   ],
   imports: [
@@ -34,7 +40,8 @@ import { ChambreModule } from './chambre/chambre.module';
     BrowserAnimationsModule,
     ReservationModule,
     CommonModule,
-    ChambreModule
+    ChambreModule,
+    
     
 
 

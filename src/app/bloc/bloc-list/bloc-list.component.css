@@ -1,0 +1,21 @@
+.container-fluid {
+    max-width: 60%; /* Réduit la largeur de la liste à 80% de la largeur de son conteneur */
+    margin: 0 auto; /* Centre la liste horizontalement */
+}
+/* Styles pour les boutons personnalisés */
+.custom-btn {
+    margin-right: 5px; /* Marge à droite entre les boutons */
+    /* Ajoutez d'autres styles personnalisés au besoin */
+}
+
+.btn-primary.custom-btn {
+    background-color: #007bff; /* Couleur de fond pour le bouton d'édition */
+    color: #fff; /* Couleur du texte */
+}
+
+.btn-danger.custom-btn {
+    background-color: #dc3545; /* Couleur de fond pour le bouton de suppression */
+    color: #fff; /* Couleur du texte */
+}
+
+/* Ajoutez d'autres styles personnalisés au besoin */

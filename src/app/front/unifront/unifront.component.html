@@ -104,24 +104,21 @@
               <!-- Colonne pour le tableau -->
               <div class="col-md-6 mb-4">
                   <div class="table-responsive">
-                      <table class="table table-striped">
-                          <!-- En-têtes de la table -->
-                          <thead>
-                              <tr>
-                                  <th>Nom Foyer</th>
-                                  <th>Capacite Foyer</th>
-                              </tr>
-                          </thead>
-                          <!-- Contenu de la table -->
-                          <tbody>
-                              <tr *ngFor="let f of List_foyer" class="table-row">
-                                  <!-- Cellules de la table -->
-                                  <td class="table-cell">{{ f.nomFoyer }}</td>
-                                  <td class="table-cell">{{ f.capaciteFoyer }}</td>
-                              </tr>
-                          </tbody>
-                      </table>
-                  </div>
+                    <table class="table table-light">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Nom</th>
+                                <th>Adresse</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let u of universites">
+                                <td>{{ u.nomUniversite }}</td>
+                                <td>{{ u.adresse }}</td>
+                               
+                            </tr>
+                        </tbody>
+                    </table>            </div>
               </div>
           </div>
       </div>

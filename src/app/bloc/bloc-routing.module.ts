@@ -8,7 +8,8 @@ const routes: Routes = [
 
   {path:"bloclist", component: BlocListComponent},
   {path:"addbloc", component: AddBlocComponent},
-  {path:"editbloc/:id", component: EditBlocComponent}
+  {path:"bloc/editbloc/:id", component: EditBlocComponent}
+
 ];
 
 @NgModule({

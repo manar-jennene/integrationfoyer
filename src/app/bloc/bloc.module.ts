@@ -7,6 +7,7 @@ import { AddBlocComponent } from './add-bloc/add-bloc.component';
 import { EditBlocComponent } from './edit-bloc/edit-bloc.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlocService } from '../service/bloc.service';
+import { NavBComponent } from '../nav-b/nav-b.component';
 
 //import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
@@ -14,7 +15,8 @@ import { BlocService } from '../service/bloc.service';
   declarations: [
     BlocListComponent,
     EditBlocComponent,
-    AddBlocComponent
+    AddBlocComponent,
+    NavBComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,33 @@
+/* CSS pour réduire la taille de la liste */
+.container-fluid {
+    max-width: 60%; /* Réduit la largeur de la liste à 80% de la largeur de son conteneur */
+    margin: 0 auto; /* Centre la liste horizontalement */
+}
+
+.table {
+    font-size: 14px; /* Taille de police plus petite */
+}
+
+.table th,
+.table td {
+    padding: 8px 12px; /* Espacement réduit entre les cellules */
+}
+
+/* Réduit la hauteur des boutons */
+.btn {
+    padding: 4px 8px;
+    font-size: 12px; /* Taille de police plus petite pour les boutons */
+    line-height: 1.5; /* Réduit l'espacement entre les lignes */
+}
+
+/* Réduit la hauteur des icônes dans les boutons */
+.btn i {
+    font-size: 12px;
+}
+
+/* Réduit la hauteur des champs de formulaire */
+.form-control {
+    padding: 4px 8px;
+    font-size: 12px;
+    height: 28px; /* Hauteur plus petite pour les champs de saisie */
+}
