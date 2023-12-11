@@ -21,12 +21,19 @@
                         <td class="table-cell">{{ f.nomFoyer }}</td>
                         <td class="table-cell">{{ f.capaciteFoyer }}</td>
                         <td class="table-cell">
-                            <a [routerLink]="['editUser', f.idFoyer]" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Edit">
+                           <!--  <a [routerLink]="['editUser', f.idFoyer]" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Edit">
                                 <i class="fas fa-edit"></i>
                             </a>
                             <button (click)="deleteFoyer(f.idFoyer)" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Supprimer">
                                 <i class="fas fa-trash-alt"></i>
-                            </button>
+                            </button> -->
+                            <a [routerLink]="['editUser', f.idFoyer]" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Edit">
+                                Edit
+                              </a>
+                              <button (click)="deleteFoyer(f.idFoyer)" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Supprimer">
+                                Supprimer
+                              </button>
+                              
                         </td>
                     </tr>
                 </tbody>

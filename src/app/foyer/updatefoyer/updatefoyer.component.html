@@ -1,6 +1,8 @@
+<app-navbar></app-navbar>
+
 <div class="container">
 
-    <h2 class="text-center mb-4">modifier un foyer</h2>
+    <h2 class="text-center mb-4">Modifier un foyer</h2>
     <div class="row justify-content-center">
         <div class="col-md-6">
           <form #updateForm="ngForm" (ngSubmit)="updateFoyer()">
@@ -14,7 +16,7 @@
   
   
         <input type="data"class="form-control" id="capaciteFoyer" name="capaciteFoyer" [(ngModel)]="foyerData.capaciteFoyer" #capaciteFoyer="ngModel">
-        <button type="submit" class="btn btn-primary">Modifier foyer</button>
+        <button type="submit" class="btn custom-button">Modifier foyer</button>
 
         </form>
   </div>

@@ -22,6 +22,7 @@ import { ListReservationsEtudiantComponent } from './list-reservations-etudiant/
 import { ReservationDetailsComponent } from './reservation-details/reservation-details.component';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { ReservationService } from '../service/reservation.service';
+import { ReservnavComponent } from '../front/reservnav/reservnav.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ReservationService } from '../service/reservation.service';
     ReservationFormComponent,
     ListReservationsComponent,
     ListReservationsEtudiantComponent,
-    ReservationDetailsComponent
+    ReservationDetailsComponent,
+    ReservnavComponent
 
   ],
   imports: [

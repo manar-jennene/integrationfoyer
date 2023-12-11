@@ -15,7 +15,7 @@ const routes: Routes = [
     component: ListReservationsEtudiantComponent,
   },
   {
-    path: ':id',
+    path: 'det/:id',
     component: ReservationDetailsComponent,
   },
 ];
